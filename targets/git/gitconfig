@@ -1,6 +1,6 @@
 [user]
-  name = Shaun Egan
-  email = shauneganza@gmail.com
+	name = Tyler Pillay
+	email = treshpillay@gmail.com
 [alias]
   co = checkout
   lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -42,3 +42,10 @@
   default = current
 [cola]
   spellcheck = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main
