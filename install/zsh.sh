@@ -11,8 +11,8 @@ else
 fi
 
 item_start "Linking"
-if [ ! -f ~/.oh-my-zsh/themes/mytheme.zsh-theme ]; then
-    ln -s $PWD/targets/zsh/mytheme.zsh-theme ~/.oh-my-zsh/themes/mytheme.zsh-theme &>/dev/null
+if [ ! -f ~/.oh-my-zsh/themes/tyler.zsh-theme ]; then
+    ln -s $PWD/targets/zsh/tyler.zsh-theme ~/.oh-my-zsh/themes/tyler.zsh-theme &>/dev/null
     item_complete "done"
 else
     item_complete "already exists"
