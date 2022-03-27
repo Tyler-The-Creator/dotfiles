@@ -30,12 +30,30 @@ install_or_upgrade python
 install_or_upgrade python3
 
 # development tools
-install_or_upgrade cmake # used for YCM in vim
-install_or_upgrade git
-install_or_upgrade fzf # used for fuzzy finding
-install_or_upgrade zsh
-install_or_upgrade git-cola
 install_or_upgrade vim # up-to-date vim
-install_or_upgrade golang
+install_or_upgrade cmake # used for YCM in vim
+install_or_upgrade fzf # used for fuzzy finding
 install_or_upgrade gnupg
+
+# git
+install_or_upgrade git
+install_or_upgrade git-cola
+
+# cli tools for development
+install_or_upgrade golang
+install_or_upgrade awscli
+install_or_upgrade aws-cdk
+install_or_upgrade azure-cli
+install_or_upgrade terraform
+install_or_upgrade dotnet
+
+# terminal
+install_or_upgrade zsh
 install_or_upgrade iterm2
+
+# chat apps
+install_or_upgrade discord
+install_or_upgrade slack
+
+# spotify
+install_or_upgrade spotify
