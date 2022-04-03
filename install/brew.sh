@@ -24,6 +24,7 @@ installing "Homebrew packages"
 # cli tools
 install_or_upgrade wget
 install_or_upgrade htop
+install_or_upgrade fig
 
 # python
 install_or_upgrade python
