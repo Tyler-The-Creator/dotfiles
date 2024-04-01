@@ -86,7 +86,6 @@ prompt_context() {
 
 # Git: branch/detached head, dirty status
 prompt_git() {
-
   local PL_BRANCH_CHAR
   () {
     local LC_ALL="" LC_CTYPE="en_US.UTF-8"
@@ -164,7 +163,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment 39 black '%~'
+  prompt_segment white black '⚡ %~'
 }
 
 # Virtualenv: current working virtualenv
@@ -189,6 +188,25 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+# Node Version
+prompt_node_version() {
+  if [[ -f "package.json" ]]; then
+    local node_version=$(node -v)
+    local npm_version=$(npm -v)
+    prompt_segment red gray "${node_version} ⬢ ${npm_version}"
+  fi
+}
+
+# Flutter Version
+prompt_flutter_version() {
+  if [[ -f "pubspec.yaml" ]]; then
+    # Get the full version string from Flutter, then parse it for just the version number
+    local flutter_version=$(flutter --version | head -n 1 | awk '{print $2}')
+    prompt_segment blue black "${flutter_version}"
+  fi
+}
+
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -196,6 +214,8 @@ build_prompt() {
   prompt_virtualenv
   # prompt_context
   prompt_dir
+  prompt_node_version
+  prompt_flutter_version
   prompt_git
   prompt_hg
   prompt_end
