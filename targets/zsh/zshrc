@@ -59,8 +59,6 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$HOME/dev/flutter/bin:$PATH
 
-alias dala="mongosh "mongodb+srv://dala-sandbox-cluster.qxndyfg.mongodb.net/dala" --apiVersion 1 --username admin --password BS2UVFDwafpmU0e1"
-alias cgo="ssh -i ~/.ssh/GoWebServerKeyPair.pem ec2-user@ec2-3-83-53-204.compute-1.amazonaws.com"
 alias pip="pip3.10" 
 
 # The next line updates PATH for the Google Cloud SDK.
